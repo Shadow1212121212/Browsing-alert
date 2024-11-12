@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق التنبيه</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>مرحباً بك في تطبيق التنبيه!</h1>
+        <p id="message">قم باختيار الوقت الذي ترغب في تتبعه، ثم اضغط على زر "بدء التشغيل".</p>
+        
+        <!-- قائمة لاختيار الدقائق -->
+        <label for="timeSelect">اختار المدة (بالدقائق):</label>
+        <select id="timeSelect">
+            <option value="15">15 دقيقة</option>
+            <option value="30">30 دقيقة</option>
+            <option value="45">45 دقيقة</option>
+            <option value="60">60 دقيقة</option>
+        </select>
+        
+        <!-- الأزرار -->
+        <div class="buttons">
+            <button id="startButton" onclick="startTracking()">بدء التشغيل</button>
+            <button id="stopButton" onclick="stopTracking()" disabled>إيقاف التشغيل</button>
+            <button id="restartButton" onclick="restartTracking()" disabled>إعادة التشغيل</button>
+        </div>
+
+        <!-- الرسالة في الأسفل -->
+        <div class="footer">
+            <p>صمم بواسطة مازن محمد</p>
+        </div>
+    </div>
+
+    <!-- ملف الصوت للتنبيه -->
+    <audio id="alertSound" src="alarm.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
